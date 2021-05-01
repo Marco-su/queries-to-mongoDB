@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src --exec babel-node"
+    "build": "babel src --out-dir build",
+    "start": "nodemon src/index.js --exec babel-node",
+    "serve": "node build/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.5"
   },
